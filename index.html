@@ -9,58 +9,87 @@
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="js/index.js"></script>
 
 </head>
 
 <body>
     <div class="main_content">
         <header>
-
+            <a href="mypage.html" class="icon_img">
+                <img src="/images/icon.png" alt="マイページへのアイコン">
+            </a>
+            <a href="qrpage.html" class="qr_link">
+                <span class="material-icons">qr_code</span>
+            </a>
         </header>
         <main>
-            <img src="images/map.png" alt="地図" class="map_img" width="100%">
+            <div class="map_area">
+                <img src="images/map.png" alt="地図" class="map_img">
+                <button type="button" class="food_btn">
+                    <span>+</span>
+                </button>
+                <button type="button" class="animal_btn">
+                    <img src="/images/dandan_icon.png" alt="ダンダンの写真">
+                </button>
+            </div>
         </main>
         <footer>
-            <div class="footer_icon active">
-                <a href="index.html">
-                    <span class="material-icons">
-                        map
-                    </span>
-                </a>
-                <a href="index.html">
-                    <p>マップ</p>
-                </a>
-                <div class="footer_icon">
+            <nav class="footer_nav">
+                <div class="footer_item">
+                    <a href="index.html">
+                        <span class="material-icons">map</span>
+                        <span>マップ</span>
+                    </a>
+                </div>
+                <div class="footer_item">
                     <a href="item.html">
-                        <span class="material-icons">
-                            business_center
-                        </span>
-                    </a>
-                    <a href="item.html">
-                        <p>アイテム</p>
+                        <span class="material-icons">business_center</span>
+                        <span>アイテム</span>
                     </a>
                 </div>
-                <div class="footer_icon">
+                <div class="footer_item">
                     <a href="collection.html">
-                        <span class="material-icons">
-                            import_contacts
-                        </span>
-                    </a>
-                    <a href="collection.html">
-                        <p>コレクション</p>
+                        <span class="material-icons">import_contacts</span>
+                        <span>コレクション</span>
                     </a>
                 </div>
-                <div class="footer_icon">
+                <div class="footer_item">
                     <a href="news.html">
-                        <span class="material-icons">
-                            feedback
-                        </span>
-                    </a>
-                    <a href="news.html">
-                        <p>お知らせ</p>
+                        <span class="material-icons">feedback</span>
+                        <span>お知らせ</span>
                     </a>
                 </div>
+            </nav>
+        </footer>
+    </div>
+    <div class="modal">
+        <div class="madal backdrop" data-close-modal></div>
+        <section class="profile_card">
+            <button type="button" class="modal_close">×</button>
+            <img src="images/profile_banban.png" alt="パンダのダンダン" class="profile_img">
+            <div class="profile_header">
+                <h1>ダンダン</h1>
+                <span class="material-icons">male</span>
+                <span class="level">0</span>
             </div>
+            <button class="zoo-link" type="button">
+                ECC動物園
+                <span class="material-icons">play_arrow</span>
+            </button>
+
+            <dl class="profile-details">
+                <div>
+                    <dt>性格</dt>
+                    <dd>大人っぽい</dd>
+                </div>
+                <div>
+                    <dt>特徴</dt>
+                    <dd>お腹の黒い点</dd>
+                </div>
+            </dl>
+        </section>
+    </div>
 </body>
 
 </html>
