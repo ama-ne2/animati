@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="js/index.js"></script>
 
 </head>
@@ -16,12 +15,14 @@
 <body>
     <div class="main_content">
         <header>
-            <a href="mypage.html" class="icon_img">
-                <img src="/images/icon.png" alt="マイページへのアイコン">
-            </a>
-            <a href="qrpage.html" class="qr_link">
-                <span class="material-icons">qr_code</span>
-            </a>
+            <div class="header_icons">
+                <a href="mypage.html" class="icon_img">
+                    <p><img src="images/mypage_icon.svg" alt="マイページに飛ぶアイコン"></p>
+                </a>
+                <a href="qrpage.html" class="qr_link">
+                    <p><img src="images/qr_icon.svg" alt="QRコードを読み込むアイコン"></p>
+                </a>
+            </div>
         </header>
         <main>
             <div class="map_area">
@@ -38,26 +39,26 @@
             <nav class="footer_nav">
                 <div class="footer_item">
                     <a href="index.html">
-                        <span class="material-icons">map</span>
-                        <span>マップ</span>
+                        <p><img src="images/map_icon.svg" alt=""></p>
+                        <p>マップ</p>
                     </a>
                 </div>
                 <div class="footer_item">
                     <a href="item.html">
-                        <span class="material-icons">business_center</span>
-                        <span>アイテム</span>
+                        <p><img src="images/itembox_icon.svg" alt=""></p>
+                        <p>アイテム</p>
                     </a>
                 </div>
                 <div class="footer_item">
                     <a href="collection.html">
-                        <span class="material-icons">import_contacts</span>
-                        <span>コレクション</span>
+                        <p><img src="images/collection_icon.svg" alt=""></p>
+                        <p>コレクション</p>
                     </a>
                 </div>
                 <div class="footer_item">
                     <a href="news.html">
-                        <span class="material-icons">feedback</span>
-                        <span>お知らせ</span>
+                        <p><img src="images/news_icon.svg" alt=""></p>
+                        <p>お知らせ</p>
                     </a>
                 </div>
             </nav>
@@ -66,7 +67,6 @@
     <div class="modal">
         <div class="madal backdrop" data-close-modal></div>
         <section class="profile_card">
-            <button type="button" class="modal_close">×</button>
             <img src="images/profile_banban.png" alt="パンダのダンダン" class="profile_img">
             <div class="profile_header">
                 <h1>ダンダン</h1>
