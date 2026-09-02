@@ -5,10 +5,12 @@ html {
 html,
 body {
     font-family: "Hiragino Kaku Gothic Pro", sans-serif;
-    width: min(100%, 440px);
+    width: 100%;
+    max-width: 440px;
     min-height: 100dvh;
     margin: 0 auto;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     a {
         text-decoration: none;
@@ -17,7 +19,7 @@ body {
 }
 
 .main_content {
-    width: 440px;
+    width: min(100%, 440px);
     margin-top: 100px;
 }
 

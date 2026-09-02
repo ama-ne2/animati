@@ -5,28 +5,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>あにまち</title>
+
     <link rel="stylesheet" href="css/collection.css">
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
+
     <div class="main_content">
         <header>
             <div class="header_icons">
                 <a href="mypage.html" class="icon_img">
-                    <p><img src="images/mypage_icon.svg" alt="マイページに飛ぶアイコン"></p>
+                    <p>
+                        <img src="images/mypage_icon.svg" alt="マイページに飛ぶアイコン">
+                    </p>
                 </a>
                 <a href="qrpage.html" class="qr_link">
-                    <p><img src="images/qr_icon.svg" alt="QRコードを読み込むアイコン"></p>
+                    <p>
+                        <img src="images/qr_icon.svg" alt="QRコードを読み込むアイコン">
+                    </p>
                 </a>
             </div>
         </header>
+
         <main>
             <h1>コレクション</h1>
-            <input type="search" name="" id="">
+            <div class="search_area">
+                <div class="search_box">
+                    <img src="images/search.svg" alt="検索マーク" class="search_icon">
+                    <input type="search" name="keyword" placeholder="キーワードで検索">
+                </div>
+                <div class="sort_box">
+                    <select name="sort">
+                        <option value="date">日付順</option>
+                        <option value="name">名前順</option>
+                        <option value="visit">好感度順</option>
+                    </select>
+                    <img src="images/pulldown.svg" alt="" class="pulldown_icon">
+                </div>
+            </div>
+
+            <div class="collection_list">
+                <article class="animal_card">
+                    <div class="animal_image">
+                        <img src="images/profile_banban.png" alt="ダンダンの写真">
+                        <div class="heart">
+                            <img src="images/heart.png" alt="ハートマーク">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="animal_info">
+                        <h2>ダンダン</h2>
+                        <div class="animal_data">
+                            <div>
+                                <p>前回訪問日</p>
+                                <time datetime="2026-09-04">
+                                    2026/09/04
+                                </time>
+                            </div>
+                            <div>
+                                <p>訪問回数</p>
+                                <span>1回</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="animal_card">
+                    <div class="animal_image">
+                        <img src="images/profile_norin.png" alt="のりん">
+                        <div class="heart">
+                            <img src="images/heart.png" alt="">
+                            <span>0</span>
+                        </div>
+                    </div>
+
+                    <div class="animal_info">
+
+                        <h2>のりん</h2>
+
+                        <div class="animal_data">
+
+                            <div>
+                                <p>前回訪問日</p>
+                                <time datetime="2026-09-03">
+                                    2026/09/03
+                                </time>
+                            </div>
+
+                            <div>
+                                <p>訪問回数</p>
+                                <span>1回</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- さき -->
+                <article class="animal_card">
+
+                    <div class="animal_image">
+
+                        <img src="images/profile_saki.png" alt="さき">
+
+                        <div class="heart">
+                            <img src="images/heart.png" alt="">
+                            <span>0</span>
+                        </div>
+
+                    </div>
+
+                    <div class="animal_info">
+
+                        <h2>さき</h2>
+
+                        <div class="animal_data">
+
+                            <div>
+                                <p>前回訪問日</p>
+                                <time datetime="2026-09-02">
+                                    2026/09/02
+                                </time>
+                            </div>
+
+                            <div>
+                                <p>訪問回数</p>
+                                <span>1回</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- コウ -->
+                <article class="animal_card">
+
+                    <div class="animal_image">
+
+                        <img src="images/profile_kou.png" alt="コウ">
+
+                        <div class="heart">
+                            <img src="images/heart.png" alt="">
+                            <span>1</span>
+                        </div>
+
+                    </div>
+
+                    <div class="animal_info">
+
+                        <h2>コウ</h2>
+
+                        <div class="animal_data">
+
+                            <div>
+                                <p>前回訪問日</p>
+                                <time datetime="2026-09-01">
+                                    2026/09/01
+                                </time>
+                            </div>
+
+                            <div>
+                                <p>訪問回数</p>
+                                <span>1回</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
         </main>
+
+
         <footer>
             <nav class="footer_nav">
                 <div class="footer_item">
@@ -55,7 +216,9 @@
                 </div>
             </nav>
         </footer>
+
     </div>
+
 </body>
 
 </html>
