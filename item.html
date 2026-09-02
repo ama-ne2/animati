@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あにまち</title>
+    <link rel="stylesheet" href="css/item.css">
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/item.js"></script>
+</head>
+
+<body>
+    <div class="main_content">
+        <header>
+            <div class="header_icons">
+                <a href="mypage.html" class="icon_img">
+                    <p><img src="images/mypage_icon.svg" alt="マイページに飛ぶアイコン"></p>
+                </a>
+                <a href="qrpage.html" class="qr_link">
+                    <p><img src="images/qr_icon.svg" alt="QRコードを読み込むアイコン"></p>
+                </a>
+            </div>
+        </header>
+        <main>
+            <h1>アイテムボックス</h1>
+            <div class="item_tabs">
+                <button type="button" class="item_tab feed active" data-category="food">餌</button>
+                <button type="button" class="item_tab favor" data-category="favorite">好感度</button>
+                <button type="button" class="item_tab benefit" data-category="reward">特典</button>
+            </div>
+            <div class="item_content active" id="food">
+                <div class="item_list">
+                    <button type="button" class="item_card feed_item" data-name="りんご" data-target="ゴリラ、レッサーパンダ、アライグマ">
+                        <img src="images/apple.png" alt="りんご">
+                        <span class="item_count">0</span>
+                    </button>
+                    <button type="button" class="item_card feed_item" data-name="にんじん" data-target="ゴリラ、レッサーパンダ、アライグマ">
+                        <img src="images/carrot.png" alt="にんじん">
+                        <span class="item_count">1</span>
+                    </button>
+                    <button type="button" class="item_card feed_item" data-name="肉" data-target="ライオン、アライグマ">
+                        <img src="images/meat.png" alt="肉">
+                        <span class="item_count">0</span>
+                    </button>
+                    <button type="button" class="item_card feed_item" data-name="草" data-target="パンダ、キリン、コアラ">
+                        <img src="images/grass.png" alt="草">
+                        <span class="item_count">1</span>
+                    </button>
+                </div>
+            </div>
+            <div class="item_content" id="favorite" hidden>
+                <div class="item_list">
+                    <button type="button" class="item_card favor_item" data-name="応援うちわ"
+                        data-target="ゴリラ、レッサーパンダ、アライグマ">
+                        <img src="images/uchiwa.png" alt="応援うちわ">
+                        <span class="item_count">1</span>
+                    </button>
+                    <button type="button" class="item_card favor_item" data-name="ペンライト" data-target="ゴリラ、レッサーパンダ">
+                        <img src="images/penlight.png" alt="ペンライト">
+                        <span class="item_count">0</span>
+                    </button>
+                    <button type="button" class="item_card favor_item" data-name="ブラシ" data-target="ゴリラ、レッサーパンダ、アライグマ">
+                        <img src="images/brush.png" alt="ブラシ">
+                        <span class="item_count">0</span>
+                    </button>
+                    <button type="button" class="item_card favor_item" data-name="ボール" data-target="ゴリラ、レッサーパンダ">
+                        <img src="images/ball.png" alt="ボール">
+                        <span class="item_count">1</span>
+                    </button>
+                </div>
+            </div>
+            <div class="item_content" id="reward" hidden>
+                <div class="item_list">
+                </div>
+            </div>
+            <section class="item_detail empty" id="itemDetail">
+                <p class="detail_empty">アイテムを選択して対象動物を見る</p>
+                <div class="detail_content">
+                    <p class="detail_note">※実際与えている餌とは異なる場合があります</p>
+                    <p class="detail_row">
+                        <span class="detail_label">名前：</span>
+                        <span class="detail_value" id="detailName"></span>
+                    </p>
+                    <p class="detail_row">
+                        <span class="detail_label">対象動物：</span>
+                        <span class="detail_value" id="detailTarget"></span>
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <nav class="footer_nav">
+                <div class="footer_item">
+                    <a href="index.html">
+                        <p><img src="images/map_icon.svg" alt=""></p>
+                        <p>マップ</p>
+                    </a>
+                </div>
+                <div class="footer_item">
+                    <a href="item.html">
+                        <p><img src="images/itembox_icon.svg" alt=""></p>
+                        <p>アイテム</p>
+                    </a>
+                </div>
+                <div class="footer_item">
+                    <a href="collection.html">
+                        <p><img src="images/collection_icon.svg" alt=""></p>
+                        <p>コレクション</p>
+                    </a>
+                </div>
+                <div class="footer_item">
+                    <a href="news.html">
+                        <p><img src="images/news_icon.svg" alt=""></p>
+                        <p>お知らせ</p>
+                    </a>
+                </div>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
