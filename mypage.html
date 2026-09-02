@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あにまち</title>
+    <link rel="stylesheet" href="css/mypage.css">
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script defer src="js/mypage.js"></script>
+</head>
+
+<body>
+    <div class="main_content">
+        <header>
+            <div class="header_icons">
+                <a href="mypage.html" class="icon_img">
+                    <p><img src="images/mypage_icon.svg" alt="マイページに飛ぶアイコン"></p>
+                </a>
+                <a href="qrpage.html" class="qr_link">
+                    <p><img src="images/qr_icon.svg" alt="QRコードを読み込むアイコン"></p>
+                </a>
+            </div>
+        </header>
+        <main class="mypage">
+            <h1>マイページ</h1>
+            <div class="mypage_form">
+                <div class="mypage_row">
+                    <label for="userName">名前</label>
+                    <div class="name_input_wrap">
+                        <div class="input_icon_wrap">
+                            <input type="text" id="userName" value="あまね">
+                            <button type="button" class="edit_button">
+                                <img src="images/edit.svg" alt="名前を編集">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mypage_row">
+                    <label for="language">言語</label>
+                    <div class="language_input_wrap">
+                        <div class="input_icon_wrap">
+                            <img src="images/lang.svg" alt="言語" class="lang_icon">
+                            <select id="language">
+                                <option value="ja">日本語</option>
+                                <option value="en">English</option>
+                            </select>
+                            <img src="images/down_arrow.svg" alt="言語を選択" class="language_arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="favorite_title">お気に入りの動物を追加</div>
+            <div class="favorite_add">
+                <img src="images/plus.svg" alt="お気に入りの動物を追加">
+            </div>
+            <div class="animal_select" id="animalSelect" hidden>
+                <div class="animal_select_space"></div>
+
+                <div class="collection_list">
+                    <button type="button" class="animal_card" data-name="ダンダン" data-image="images/profile_banban.png">
+                        <div class="animal_image">
+                            <img src="images/profile_banban.png" alt="ダンダン">
+                            <div class="heart">
+                                <img src="images/heart.png" alt="">
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <div class="animal_info">
+                            <h2>ダンダン</h2>
+                            <div class="animal_data">
+                                <div>
+                                    <p>前回訪問日</p>
+                                    <time datetime="2026-09-04">2026/09/04</time>
+                                </div>
+                                <div>
+                                    <p>訪問回数</p>
+                                    <span>1回</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" class="animal_card" data-name="のりん" data-image="images/profile_norin.png">
+                        <div class="animal_image">
+                            <img src="images/profile_norin.png" alt="のりん">
+                            <div class="heart">
+                                <img src="images/heart.png" alt="">
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <div class="animal_info">
+                            <h2>のりん</h2>
+                            <div class="animal_data">
+                                <div>
+                                    <p>前回訪問日</p>
+                                    <time datetime="2026-09-03">2026/09/03</time>
+                                </div>
+                                <div>
+                                    <p>訪問回数</p>
+                                    <span>1回</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" class="animal_card" data-name="さき" data-image="images/profile_saki.png">
+                        <div class="animal_image">
+                            <img src="images/profile_saki.png" alt="さき">
+                            <div class="heart">
+                                <img src="images/heart.png" alt="">
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <div class="animal_info">
+                            <h2>さき</h2>
+                            <div class="animal_data">
+                                <div>
+                                    <p>前回訪問日</p>
+                                    <time datetime="2026-09-02">2026/09/02</time>
+                                </div>
+                                <div>
+                                    <p>訪問回数</p>
+                                    <span>1回</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" class="animal_card" data-name="コウ" data-image="images/profile_kou.png">
+                        <div class="animal_image">
+                            <img src="images/profile_kou.png" alt="コウ">
+                            <div class="heart">
+                                <img src="images/heart.png" alt="">
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <div class="animal_info">
+                            <h2>コウ</h2>
+                            <div class="animal_data">
+                                <div>
+                                    <p>前回訪問日</p>
+                                    <time datetime="2026-09-01">2026/09/01</time>
+                                </div>
+                                <div>
+                                    <p>訪問回数</p>
+                                    <span>1回</span>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <nav class="footer_nav">
+                <div class="footer_item">
+                    <a href="index.html">
+                        <p><img src="images/map_icon.svg" alt=""></p>
+                        <p>マップ</p>
+                    </a>
+                </div>
+                <div class="footer_item">
+                    <a href="item.html">
+                        <p><img src="images/itembox_icon.svg" alt=""></p>
+                        <p>アイテム</p>
+                    </a>
+                </div>
+                <div class="footer_item">
+                    <a href="collection.html">
+                        <p><img src="images/collection_icon.svg" alt=""></p>
+                        <p>コレクション</p>
+                    </a>
+                </div>
+                <div class="footer_item">
+                    <a href="news.html">
+                        <p><img src="images/news_icon.svg" alt=""></p>
+                        <p>お知らせ</p>
+                    </a>
+                </div>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
