@@ -24,6 +24,7 @@
                 </a>
             </div>
         </header>
+
         <main class="mypage">
             <h1>マイページ</h1>
             <div class="mypage_form">
@@ -52,12 +53,57 @@
                     </div>
                 </div>
             </div>
-            <div class="favorite_title">お気に入りの動物を追加</div>
-            <div class="favorite_add">
-                <img src="images/plus.svg" alt="お気に入りの動物を追加">
-            </div>
+
+            <section class="favorite_area" id="favoriteArea">
+                <h2 class="favorite_title" id="favoriteTitle">お気に入りの動物を追加</h2>
+                <button type="button" class="favorite_add" id="favoriteAdd">
+                    <img src="images/plus.svg" alt="お気に入りの動物を追加" class="favorite_add_icon">
+                </button>
+                <div class="favorite_registered" id="favoriteRegistered" hidden>
+                    <div class="favorite_animal_image">
+                        <img src="" alt="" id="favoriteAnimalImage">
+                        <button type="button" class="animal_change" id="animalChange">
+                            <img src="images/change.svg" alt="お気に入りの動物を変更">
+                        </button>
+                    </div>
+                    <div class="affection_actions">
+                        <button type="button" class="affection_action food_action" id="foodAction">
+                            <img src="images/food.svg" alt="食べ物をあげる">
+                        </button>
+                        <button type="button" class="affection_action present_action" id="presentAction">
+                            <img src="images/present.svg" alt="プレゼントをあげる">
+                        </button>
+                    </div>
+                    <div class="affection_status">
+                        <div class="affection_bar">
+                            <div class="affection_bar_fill" id="affectionBarFill"></div>
+                        </div>
+                        <div class="affection_value">
+                            <img src="images/heart.png" alt="好感度">
+                            <span id="affectionValue">0</span>
+                        </div>
+                    </div>
+                    <button type="button" class="reward_list_button" id="rewardOpen">報酬一覧</button>
+                </div>
+            </section>
             <div class="animal_select" id="animalSelect" hidden>
                 <div class="animal_select_space"></div>
+
+                <div class="search_area">
+                    <div class="search_box">
+                        <img src="images/search.svg" alt="検索マーク" class="search_icon">
+                        <input type="search" name="animalKeyword" id="animalKeyword" placeholder="キーワードで検索">
+                    </div>
+
+                    <div class="sort_box">
+                        <select name="animalSort" id="animalSort">
+                            <option value="date">日付順</option>
+                            <option value="name">名前順</option>
+                            <option value="favor">好感度順</option>
+                        </select>
+                        <img src="images/pulldown.svg" alt="" class="pulldown_icon">
+                    </div>
+                </div>
 
                 <div class="collection_list">
                     <button type="button" class="animal_card" data-name="ダンダン" data-image="images/profile_banban.png">
@@ -150,6 +196,49 @@
                                 </div>
                             </div>
                         </div>
+                    </button>
+                </div>
+
+                <button type="button" class="animal_back" id="animalBack">
+                    戻る
+                </button>
+            </div>
+            <div class="animal_confirm" id="animalConfirm" hidden>
+                <div class="animal_confirm_box">
+                    <p class="confirm_animal_name" id="confirmAnimalName"></p>
+                    <p class="confirm_text">を追加しますか？</p>
+                    <div class="confirm_buttons">
+                        <button type="button" class="confirm_no" id="confirmNo">いいえ</button>
+                        <button type="button" class="confirm_yes" id="confirmYes">はい</button>
+                    </div>
+                </div>
+            </div>
+            <div class="reward_modal" id="rewardModal" hidden>
+                <div class="reward_modal_box">
+                    <ul class="reward_list">
+                        <li class="reward_item">
+                            <img src="images/heart1.png" alt="好感度1">
+                            <p>デジタル写真</p>
+                        </li>
+                        <li class="reward_item">
+                            <img src="images/heart2.png" alt="好感度2">
+                            <p>動画</p>
+                        </li>
+                        <li class="reward_item">
+                            <img src="images/heart3.png" alt="好感度3">
+                            <p>グッズ引換券</p>
+                        </li>
+                        <li class="reward_item">
+                            <img src="images/heart4.png" alt="好感度4">
+                            <p>一回入館料20%OFF</p>
+                        </li>
+                        <li class="reward_item">
+                            <img src="images/heartMAX.png" alt="好感度MAX">
+                            <p>餌やり体験無料</p>
+                        </li>
+                    </ul>
+                    <button type="button" class="reward_close" id="rewardClose">
+                        <img src="images/cross_btn.png" alt="報酬一覧を閉じる">
                     </button>
                 </div>
             </div>

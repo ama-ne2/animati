@@ -110,42 +110,278 @@
     padding: 6px;
 }
 
-.favorite_title {
+.favorite_area {
+    width: 100%;
     margin-top: 60px;
     text-align: center;
+}
+
+.favorite_title {
+    margin: 0 0 20px;
     font-size: 24px;
+    font-weight: 500;
     color: #470000;
 }
 
 .favorite_add {
-    cursor: pointer;
-    position: relative;
     width: 280px;
     height: 200px;
-    margin: 10px auto 0;
+    margin: 0 auto;
+    padding: 0;
     box-sizing: border-box;
     border: 4px solid #470000;
+    border-radius: 8px;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    cursor: pointer;
 }
 
-.favorite_add img {
-    display: block;
+.favorite_add_icon {
     width: 100px;
     height: 100px;
-    padding: 30px;
+}
+
+.favorite_registered {
+    width: 100%;
+}
+
+.favorite_animal_image {
+    position: relative;
+    width: 280px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.favorite_animal_image>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #1E8B00;
+    border-radius: 16px;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+.animal_change {
+    position: absolute;
+    right: -34px;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.animal_change img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.affection_actions {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+}
+
+.affection_action {
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #E15255;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+}
+
+.affection_action:hover {
+    opacity: 0.6;
+}
+
+.affection_action img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.affection_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.affection_bar {
+    width: 200px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 2px solid #470000;
+    border-radius: 7px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.affection_bar_fill {
+    width: 0%;
+    height: 100%;
+    background-color: #E95555;
+    transition: width 0.3s ease;
+}
+
+.affection_value {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.affection_value img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.affection_value span {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    min-width: 0;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+}
+
+.reward_list_button {
+    width: 90px;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #B9946A;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+    .favorite_animal_image {
+        width: min(280px, calc(100vw - 100px));
+        height: auto;
+        aspect-ratio: 7 / 5;
+    }
+
+    .animal_change {
+        right: -34px;
+    }
+
+    .affection_actions {
+        gap: 70px;
+    }
+
+    .affection_bar {
+        width: min(200px, 55vw);
+    }
 }
 
 .animal_select {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 20px 120px;
+    padding: 0 20px;
 }
 
 .animal_select_space {
-    height: 66px;
+    height: 60px;
+}
+
+.animal_select .search_area {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 265px) minmax(80px, 95px);
+    gap: clamp(15px, 9.1vw, 40px);
+    margin-bottom: 30px;
+}
+
+.animal_select .search_box {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 2px solid #470000;
+    border-radius: 11px;
+    background-color: #fff;
+}
+
+.animal_select .search_icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    object-fit: contain;
+}
+
+.animal_select .search_box input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 12px 0 34px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.animal_select .search_box input::placeholder {
+    color: #222;
+}
+
+.animal_select .sort_box {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 2px solid #470000;
+    border-radius: 11px;
+    background-color: #fff;
+}
+
+.animal_select .sort_box select {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 27px 0 9px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 12px;
+    color: #222;
+    cursor: pointer;
+}
+
+.animal_select .pulldown_icon {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    width: 11px;
+    height: 11px;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .animal_select .collection_list {
@@ -154,24 +390,25 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: clamp(15px, 9.1vw, 40px);
     row-gap: 30px;
-    justify-content: center;
 }
 
 .animal_select .animal_card {
-    width: 100%;
+    width: min(100%, 180px);
     aspect-ratio: 1 / 1;
+    justify-self: center;
     box-sizing: border-box;
+    padding: 0;
     border: 5px solid #1E8B00;
     background-color: #fff;
     overflow: hidden;
-    padding: 0;
     cursor: pointer;
 }
 
 .animal_select .animal_image {
     position: relative;
-    overflow: hidden;
+    width: 100%;
     height: 55%;
+    overflow: hidden;
 }
 
 .animal_select .animal_image>img {
@@ -183,10 +420,10 @@
 
 .animal_select .heart {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 48px;
-    height: 48px;
+    top: 6px;
+    right: 6px;
+    width: 36px;
+    height: 36px;
 }
 
 .animal_select .heart img {
@@ -202,37 +439,37 @@
     left: 50%;
     transform: translate(-50%, -40%);
     color: #fff;
-    font-size: 17px;
+    font-size: 13px;
     line-height: 1;
 }
 
 .animal_select .animal_info {
     width: 100%;
     height: 45%;
-    padding: 8px 5px;
+    box-sizing: border-box;
+    padding: 8px 10px;
     background-color: #fff;
     text-align: center;
-    box-sizing: border-box;
 }
 
 .animal_select .animal_info h2 {
+    margin: 0 0 5px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.2;
-    margin: 0 0 5px;
 }
 
 .animal_select .animal_data {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 3px;
     box-sizing: border-box;
+    padding: 0 1px;
 }
 
 .animal_select .animal_data>div {
-    text-align: center;
     min-width: 0;
+    text-align: center;
 }
 
 .animal_select .animal_data p {
@@ -251,7 +488,23 @@
     white-space: nowrap;
 }
 
-.animal_select .animal_card:hover {
+.animal_back {
+    position: fixed;
+    left: max(20px, calc(50% - 200px));
+    bottom: 140px;
+    width: 120px;
+    height: 50px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    background-color: #470000;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.animal_back:hover {
     opacity: 0.7;
     transition: opacity 0.2s ease;
 }
@@ -263,7 +516,13 @@
     }
 
     .animal_select_space {
-        height: 66px;
+        height: 60px;
+    }
+
+    .animal_select .search_area {
+        grid-template-columns: minmax(0, 1fr) minmax(80px, 95px);
+        gap: clamp(15px, 9.1vw, 40px);
+        margin-bottom: 30px;
     }
 
     .animal_select .collection_list {
@@ -274,39 +533,193 @@
 
     .animal_select .animal_card {
         width: min(100%, 180px);
-        justify-self: center;
-        border-width: 5px;
     }
 
-    .animal_select .heart {
-        top: 6px;
-        right: 6px;
-        width: 36px;
-        height: 36px;
+    .animal_back {
+        left: 30px;
+        bottom: 140px;
+    }
+}
+
+.animal_confirm {
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.animal_confirm[hidden] {
+    display: none;
+}
+
+.animal_confirm_box {
+    width: min(360px, calc(100% - 40px));
+    height: 250px;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 4px solid #470000;
+    border-radius: 8px;
+    background-color: #FFFCF8;
+    text-align: center;
+}
+
+.confirm_animal_name {
+    margin: 20px 0 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.confirm_text {
+    margin: 5px 0 0;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.confirm_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.confirm_yes,
+.confirm_no {
+    width: 100px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #470000;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.confirm_no {
+    background-color: #fff;
+    color: #470000;
+}
+
+.confirm_yes {
+    background-color: #470000;
+    color: #fff;
+}
+
+.confirm_yes:hover,
+.confirm_no:hover {
+    opacity: 0.5;
+}
+
+.reward_modal {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.reward_modal[hidden] {
+    display: none;
+}
+
+.reward_modal_box {
+    position: relative;
+    width: min(100%, 390px);
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #FFFCF8;
+}
+
+.reward_list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.reward_item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 72px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(71, 0, 0, 0.2);
+}
+
+.reward_item:last-child {
+    border-bottom: none;
+}
+
+.reward_item img {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.reward_item p {
+    margin: 0 0 0 30px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+}
+
+.reward_close {
+    position: absolute;
+    left: 50%;
+    bottom: -80px;
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.reward_close:hover {
+    opacity: 0.6;
+}
+
+.reward_close img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 400px) {
+    .reward_modal {
+        padding: 20px;
     }
 
-    .animal_select .heart span {
-        font-size: 13px;
+    .reward_modal_box {
+        width: 100%;
+        padding: 30px;
     }
 
-    .animal_select .animal_info {
-        padding: 8px 10px;
+    .reward_item img {
+        width: 45px;
+        height: 45px;
     }
 
-    .animal_select .animal_info h2 {
+    .reward_item p {
+        margin-left: 30px;
         font-size: 16px;
-    }
-
-    .animal_select .animal_data {
-        padding: 0 1px;
-    }
-
-    .animal_select .animal_data p {
-        font-size: 10px;
-    }
-
-    .animal_select .animal_data time,
-    .animal_select .animal_data span {
-        font-size: 12px;
     }
 }
