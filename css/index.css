@@ -1,9 +1,412 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #FFFCF8;
+}
+
+.main_content {
+    width: min(100%, 440px);
+    height: 100dvh;
+    min-height: 100dvh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
 main {
+    position: relative;
+    width: 100%;
+    height: calc(100dvh - 200px);
     margin-top: 100px;
+    overflow: hidden;
+}
+
+.map_area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .map_img {
     display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.animal_btn {
+    cursor: pointer;
+    animation: animalFloat 2s ease-in-out infinite;
+}
+
+@keyframes animalFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.construction_btn {
+    cursor: pointer;
+}
+
+.animal_btn:hover {
+    animation-play-state: paused;
+}
+
+main {
+    width: 100%;
+    height: calc(100dvh - 200px);
+    margin: 0;
+    overflow: hidden;
+}
+
+.map_area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.map_img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.construction_btn {
+    position: absolute;
+    left: 18px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.construction_img {
+    display: block;
+    width: 90px;
     height: auto;
+}
+
+.construction_arrow {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.animal_btn {
+    position: absolute;
+    right: 50px;
+    bottom: 75px;
+    width: 115px;
+    height: 130px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.animal_frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 115px;
+    height: 130px;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.animal_icon {
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    width: 97px;
+    height: 97px;
+    object-fit: cover;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.construction_btn:hover,
+.animal_btn:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+    .construction_btn {
+        left: 16px;
+        bottom: 65px;
+    }
+
+    .construction_img {
+        width: 82px;
+    }
+
+    .animal_btn {
+        right: 45px;
+        bottom: 70px;
+        width: 105px;
+        height: 120px;
+    }
+
+    .animal_frame {
+        width: 105px;
+        height: 120px;
+    }
+
+    .animal_icon {
+        top: 9px;
+        left: 9px;
+        width: 87px;
+        height: 87px;
+    }
+}
+
+.modal {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal_backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile_card {
+    position: relative;
+    z-index: 1;
+    width: min(400px, calc(100% - 20px));
+    box-sizing: border-box;
+    padding: 25px 30px 40px;
+    border: 4px solid #470000;
+    border-radius: 8px;
+    background-color: #FFFCF8;
+}
+
+.profile_img {
+    display: block;
+    width: 320px;
+    height: 200px;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.profile_header {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.profile_header h1 {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.gender_icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.profile_heart {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.profile_heart img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profile_heart span {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.zoo_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    margin-top: 18px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border: 3px solid #51BEDC;
+    border-radius: 14px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.zoo_link img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 3px;
+}
+
+.profile_details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin: 20px 0 0;
+}
+
+.profile_detail {
+    border: 1px solid rgba(71, 0, 0, 0.3);
+    background-color: #fff;
+    text-align: center;
+}
+
+.profile_detail dt {
+    padding: 7px 5px;
+    background-color: #1E8B00;
+    color: #fff;
+    font-size: 12px;
+}
+
+.profile_detail dd {
+    min-height: 70px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.profile_actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 22px;
+}
+
+.profile_action {
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+
+.profile_action p {
+    margin: 0 0 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.profile_action_img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.place_img {
+    object-fit: cover;
+}
+
+.search_img {
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.profile_close {
+    position: absolute;
+    left: 50%;
+    bottom: -42px;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.profile_close img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 400px) {
+    .profile_card {
+        width: calc(100% - 30px);
+        padding: 20px 20px 35px;
+    }
+
+    .profile_img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .profile_details {
+        gap: 20px;
+    }
+
+    .profile_actions {
+        gap: 10px;
+    }
+
+    .profile_action_img {
+        width: min(100px, 25vw);
+        height: min(100px, 25vw);
+    }
 }

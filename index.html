@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/index.js"></script>
-
 </head>
 
 <body>
@@ -27,11 +26,16 @@
         <main>
             <div class="map_area">
                 <img src="images/map.png" alt="地図" class="map_img">
-                <button type="button" class="food_btn">
-                    <span>+</span>
+                <button type="button" class="construction_btn">
+                    <img src="images/stop_img.png" alt="工事中" class="construction_img">
+                    <img src="images/down_arrow.svg" alt="" class="construction_arrow">
                 </button>
-                <button type="button" class="animal_btn">
-                    <img src="/images/dandan_icon.png" alt="ダンダンの写真">
+                <button type="button" class="animal_btn" data-name="ダンダン" data-zoo="ECC動物園"
+                    data-image="images/profile_banban.png" data-gender="images/man.png" data-heart="0"
+                    data-personality="大人っぽい" data-feature="お腹の黒い点" data-place="images/place_grass.png"
+                    data-food="images/grass.png">
+                    <img src="images/icon_frame.png" alt="" class="animal_frame">
+                    <img src="images/dandan_icon.png" alt="ダンダン" class="animal_icon">
                 </button>
             </div>
         </main>
@@ -64,28 +68,50 @@
             </nav>
         </footer>
     </div>
-    <div class="modal">
-        <div class="madal backdrop" data-close-modal></div>
+    <div class="modal" id="profileModal" hidden>
+        <div class="modal_backdrop" id="modalBackdrop"></div>
         <section class="profile_card">
-            <img src="images/profile_banban.png" alt="パンダのダンダン" class="profile_img">
+            <img src="" alt="" class="profile_img" id="profileImage">
             <div class="profile_header">
-                <h1>ダンダン</h1>
-                <span class="level">0</span>
-            </div>
-            <button class="zoo-link" type="button">
-                ECC動物園
-            </button>
-
-            <dl class="profile-details">
-                <div>
-                    <dt>性格</dt>
-                    <dd>大人っぽい</dd>
+                <h1 id="profileName"></h1>
+                <img src="" alt="性別" class="gender_icon" id="profileGender">
+                <div class="profile_heart">
+                    <img src="images/heart.png" alt="好感度">
+                    <span id="profileHeart">0</span>
                 </div>
-                <div>
+            </div>
+            <a href="#" class="zoo_link" id="zooLink" target="_blank" rel="noopener noreferrer">
+                <span id="zooName"></span>
+                <img src="images/sight_btn.svg" alt="">
+            </a>
+            <dl class="profile_details">
+                <div class="profile_detail">
+                    <dt>性格</dt>
+                    <dd id="profilePersonality"></dd>
+                </div>
+                <div class="profile_detail">
                     <dt>特徴</dt>
-                    <dd>お腹の黒い点</dd>
+                    <dd id="profileFeature"></dd>
                 </div>
             </dl>
+            <div class="profile_actions">
+                <div class="profile_action">
+                    <p>出現場所</p>
+                    <img src="" alt="出現場所" class="profile_action_img place_img" id="profilePlace">
+                </div>
+                <div class="profile_action">
+                    <p>好きな餌</p>
+                    <img src="" alt="好きな餌" class="profile_action_img food_img" id="profileFood">
+                </div>
+                <a href="#" class="profile_action search_action" id="browserSearch" target="_blank"
+                    rel="noopener noreferrer">
+                    <p>ブラウザで検索</p>
+                    <img src="images/search.svg" alt="検索" class="profile_action_img search_img">
+                </a>
+            </div>
+            <button type="button" class="profile_close" id="profileClose">
+                <img src="images/cross_btn.png" alt="プロフィールを閉じる">
+            </button>
         </section>
     </div>
 </body>
