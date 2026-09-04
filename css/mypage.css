@@ -1,5 +1,32 @@
-.mypage {
+[hidden] {
+    display: none !important;
+}
+
+html,
+body {
     width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: #FFFCF8;
+}
+
+.main_content {
+    width: min(100%, 440px);
+    height: 100dvh;
+    min-height: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mypage {
+    position: relative;
+    width: 100%;
+    height: calc(100dvh - 200px);
+    margin-top: 100px;
     box-sizing: border-box;
     padding: 0 20px;
     overflow: hidden;
@@ -7,7 +34,7 @@
 
 .mypage h1 {
     margin: 0;
-    padding: 20px 0 0;
+    padding: 18px 0 0;
     text-align: center;
     font-size: 20px;
     font-weight: 500;
@@ -15,7 +42,7 @@
 
 .mypage_form {
     width: fit-content;
-    margin: 20px auto 0;
+    margin: 18px auto 0;
 }
 
 .mypage_row {
@@ -25,7 +52,7 @@
 }
 
 .mypage_row+.mypage_row {
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .mypage_row label {
@@ -41,13 +68,13 @@
 
 .input_icon_wrap {
     position: relative;
-    width: 230px;
+    width: 210px;
     height: 30px;
 }
 
 .input_icon_wrap input,
 .input_icon_wrap select {
-    width: 230px;
+    width: 210px;
     height: 30px;
     box-sizing: border-box;
     border: 1px solid #470000;
@@ -79,6 +106,7 @@
     width: 24px;
     height: 24px;
     padding: 2px;
+    box-sizing: border-box;
 }
 
 .input_icon_wrap select {
@@ -95,8 +123,9 @@
     left: 5px;
     width: 24px;
     height: 24px;
-    pointer-events: none;
     padding: 3px;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
 .language_arrow {
@@ -106,26 +135,28 @@
     right: 3px;
     width: 24px;
     height: 24px;
-    pointer-events: none;
     padding: 6px;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
 .favorite_area {
     width: 100%;
-    margin-top: 60px;
+    margin-top: 48px;
     text-align: center;
 }
 
 .favorite_title {
-    margin: 0 0 20px;
+    margin: 0 0 16px;
     font-size: 24px;
     font-weight: 500;
     color: #470000;
 }
 
 .favorite_add {
-    width: 280px;
-    height: 200px;
+    width: min(260px, calc(100vw - 100px));
+    aspect-ratio: 7 / 5;
+    height: auto;
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -139,8 +170,8 @@
 }
 
 .favorite_add_icon {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 .favorite_registered {
@@ -149,8 +180,9 @@
 
 .favorite_animal_image {
     position: relative;
-    width: 280px;
-    height: 200px;
+    width: min(260px, calc(100vw - 100px));
+    aspect-ratio: 7 / 5;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -185,20 +217,19 @@
 .affection_actions {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    margin-top: 20px;
+    gap: 70px;
+    margin-top: 16px;
 }
 
 .affection_action {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     padding: 0;
     border: none;
     border-radius: 8px;
     background-color: #E15255;
     cursor: pointer;
     transition: opacity 0.2s ease;
-
 }
 
 .affection_action:hover {
@@ -207,10 +238,11 @@
 
 .affection_action img {
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    box-sizing: border-box;
     object-fit: contain;
-    padding: 10px;
 }
 
 .affection_status {
@@ -218,12 +250,12 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .affection_bar {
     width: 200px;
-    height: 20px;
+    height: 18px;
     box-sizing: border-box;
     border: 2px solid #470000;
     border-radius: 7px;
@@ -240,15 +272,15 @@
 
 .affection_value {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     flex-shrink: 0;
 }
 
 .affection_value img {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
 }
 
@@ -259,7 +291,7 @@
     transform: translate(-50%, -65%);
     min-width: 0;
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
     text-align: center;
 }
@@ -267,7 +299,7 @@
 .reward_list_button {
     width: 90px;
     height: 30px;
-    margin-top: 20px;
+    margin-top: 14px;
     border: none;
     border-radius: 8px;
     background-color: #B9946A;
@@ -276,30 +308,12 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 400px) {
-    .favorite_animal_image {
-        width: min(280px, calc(100vw - 100px));
-        height: auto;
-        aspect-ratio: 7 / 5;
-    }
-
-    .animal_change {
-        right: -34px;
-    }
-
-    .affection_actions {
-        gap: 70px;
-    }
-
-    .affection_bar {
-        width: min(200px, 55vw);
-    }
-}
-
 .animal_select {
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
     padding: 0 20px;
+    overflow: hidden;
 }
 
 .animal_select_space {
@@ -309,7 +323,7 @@
 .animal_select .search_area {
     width: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 265px) minmax(80px, 95px);
+    grid-template-columns: minmax(0, 1fr) minmax(80px, 95px);
     gap: clamp(15px, 9.1vw, 40px);
     margin-bottom: 30px;
 }
@@ -509,38 +523,6 @@
     transition: opacity 0.2s ease;
 }
 
-@media screen and (max-width: 600px) {
-    .animal_select {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .animal_select_space {
-        height: 60px;
-    }
-
-    .animal_select .search_area {
-        grid-template-columns: minmax(0, 1fr) minmax(80px, 95px);
-        gap: clamp(15px, 9.1vw, 40px);
-        margin-bottom: 30px;
-    }
-
-    .animal_select .collection_list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: clamp(15px, 9.1vw, 40px);
-        row-gap: 30px;
-    }
-
-    .animal_select .animal_card {
-        width: min(100%, 180px);
-    }
-
-    .animal_back {
-        left: 30px;
-        bottom: 140px;
-    }
-}
-
 .animal_confirm {
     position: fixed;
     z-index: 20;
@@ -704,6 +686,18 @@
 }
 
 @media screen and (max-width: 400px) {
+    .animal_change {
+        right: -30px;
+    }
+
+    .affection_actions {
+        gap: 60px;
+    }
+
+    .affection_bar {
+        width: min(190px, 55vw);
+    }
+
     .reward_modal {
         padding: 20px;
     }
@@ -721,5 +715,163 @@
     .reward_item p {
         margin-left: 30px;
         font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 760px) {
+    .mypage h1 {
+        padding-top: 12px;
+        font-size: 18px;
+    }
+
+    .mypage_form {
+        margin-top: 12px;
+    }
+
+    .mypage_row+.mypage_row {
+        margin-top: 12px;
+    }
+
+    .favorite_area {
+        margin-top: 30px;
+    }
+
+    .favorite_title {
+        margin-bottom: 12px;
+        font-size: 21px;
+    }
+
+    .favorite_animal_image,
+    .favorite_add {
+        width: min(230px, calc(100vw - 100px));
+    }
+
+    .favorite_add_icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .affection_actions {
+        gap: 60px;
+        margin-top: 12px;
+    }
+
+    .affection_action {
+        width: 52px;
+        height: 52px;
+    }
+
+    .affection_action img {
+        width: 52px;
+        height: 52px;
+        padding: 7px;
+    }
+
+    .affection_status {
+        margin-top: 10px;
+    }
+
+    .reward_list_button {
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-height: 650px) {
+    .mypage h1 {
+        padding-top: 8px;
+        font-size: 17px;
+    }
+
+    .mypage_form {
+        margin-top: 8px;
+    }
+
+    .mypage_row {
+        height: 27px;
+    }
+
+    .mypage_row+.mypage_row {
+        margin-top: 8px;
+    }
+
+    .input_icon_wrap,
+    .input_icon_wrap input,
+    .input_icon_wrap select {
+        height: 27px;
+    }
+
+    .edit_button,
+    .lang_icon,
+    .language_arrow {
+        top: 1px;
+    }
+
+    .favorite_area {
+        margin-top: 18px;
+    }
+
+    .favorite_title {
+        margin-bottom: 8px;
+        font-size: 19px;
+    }
+
+    .favorite_animal_image,
+    .favorite_add {
+        width: min(200px, calc(100vw - 100px));
+    }
+
+    .favorite_add_icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .animal_change {
+        right: -30px;
+    }
+
+    .affection_actions {
+        gap: 50px;
+        margin-top: 8px;
+    }
+
+    .affection_action {
+        width: 46px;
+        height: 46px;
+    }
+
+    .affection_action img {
+        width: 46px;
+        height: 46px;
+        padding: 6px;
+    }
+
+    .affection_status {
+        margin-top: 7px;
+    }
+
+    .affection_bar {
+        width: 170px;
+        height: 14px;
+    }
+
+    .affection_value {
+        width: 30px;
+        height: 30px;
+    }
+
+    .affection_value img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .affection_value span {
+        font-size: 11px;
+    }
+
+    .reward_list_button {
+        width: 85px;
+        height: 24px;
+        margin-top: 5px;
+        font-size: 11px;
     }
 }
