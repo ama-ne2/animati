@@ -212,7 +212,7 @@ main {
     z-index: 1;
     width: min(400px, calc(100% - 20px));
     box-sizing: border-box;
-    padding: 25px 30px 40px;
+    padding: 18px 30px 25px;
     border: 4px solid #470000;
     border-radius: 8px;
     background-color: #FFFCF8;
@@ -221,7 +221,7 @@ main {
 .profile_img {
     display: block;
     width: 320px;
-    height: 200px;
+    height: 180px;
     max-width: 100%;
     margin: 0 auto;
     object-fit: cover;
@@ -230,7 +230,7 @@ main {
 .profile_header {
     display: flex;
     align-items: center;
-    margin-top: 18px;
+    margin-top: 10px;
 }
 
 .profile_header h1 {
@@ -268,7 +268,7 @@ main {
     position: absolute;
     top: 46%;
     left: 50%;
-    transform: translate(-50%, -65%);
+    transform: translate(-50%, -50%);
     color: #fff;
     font-size: 16px;
     line-height: 1;
@@ -279,8 +279,8 @@ main {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 50px;
-    margin-top: 18px;
+    height: 45px;
+    margin-top: 8px;
     padding: 0 15px;
     box-sizing: border-box;
     border: 3px solid #51BEDC;
@@ -292,17 +292,16 @@ main {
 }
 
 .zoo_link img {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     object-fit: contain;
-    padding: 3px;
 }
 
 .profile_details {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
-    margin: 20px 0 0;
+    margin: 12px 0 0;
 }
 
 .profile_detail {
@@ -312,19 +311,19 @@ main {
 }
 
 .profile_detail dt {
-    padding: 7px 5px;
+    padding: 5px;
     background-color: #1E8B00;
     color: #fff;
     font-size: 12px;
 }
 
 .profile_detail dd {
-    min-height: 70px;
+    min-height: 55px;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 7px;
     box-sizing: border-box;
     font-size: 16px;
 }
@@ -333,7 +332,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin-top: 22px;
+    margin-top: 12px;
 }
 
 .profile_action {
@@ -343,18 +342,22 @@ main {
 }
 
 .profile_action p {
-    margin: 0 0 8px;
+    margin: 0 0 5px;
     font-size: 12px;
     white-space: nowrap;
 }
 
 .profile_action_img {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     max-width: 100%;
     margin: 0 auto;
     object-fit: contain;
+}
+
+.food_img {
+    padding: 10px;
 }
 
 .place_img {
@@ -362,16 +365,16 @@ main {
 }
 
 .search_img {
-    padding: 12px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
 .profile_close {
     position: absolute;
     left: 50%;
-    bottom: -42px;
-    width: 80px;
-    height: 80px;
+    bottom: -38px;
+    width: 70px;
+    height: 70px;
     padding: 0;
     border: none;
     background: transparent;
